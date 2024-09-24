@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('chelseafc.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+h1 {
+    text-align: left;
+    padding-left: 100px;
+    color: #ed1c24;
+    font-weight: bolder;
+    font-size: 70px;
+    margin-top: 100px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 120px;
+    margin-bottom: 100px;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+    color: #034694;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+input::placeholder {
+    color: #034694;
+}
+
+button {
+    padding: 0px 20px;
+    height: 30px;
+    width: 400px;
+    color: #034694;
+    font-weight: bolder;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+#results {
+    margin-top: 20px;
+    text-align: left;
+    padding-left: 300px;
+}
