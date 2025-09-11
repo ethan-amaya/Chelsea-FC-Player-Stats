@@ -15,13 +15,18 @@ const getAllPlayers = async () => {
     let hasMorePlayers = true;
 
     while (hasMorePlayers) {
-        const response = await fetch(`https://v3.football.api-sports.io/players?team=49&season=2022&page=${page}`, requestOptions);
+        const response = await fetch(
+            `https://v3.football.api-sports.io/players?team=49&season=2023&page=${page}`, 
+            requestOptions
+        );
         const result = await response.json();
+        console.log("API response:", result);
+
 
         if (result.response.length > 0) {
             result.response.forEach(playerInfo => {
                 const playerName = playerInfo.player.lastname;
-                const totalGoals = playerInfo.statistics.reduce((total, stat) => total + stat.goals.total, 0);
+                const totalGoals = playerInfo.statistics.reduce((total, stat) => total + (stat.goals.total || 0), 0);
                 const playerImage = playerInfo.player.photo;
 
                 playerStats.push({ name: playerName, goals: totalGoals, image: playerImage });
