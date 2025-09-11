@@ -1,63 +1,106 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100vh;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('chelseafc.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding-left: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
 }
 
 h1 {
-    text-align: left;
-    padding-left: 100px;
-    color: #ed1c24;
+    color: #034694;
     font-weight: bolder;
-    font-size: 70px;
-    margin-top: 100px;
+    font-size: 60px;
+    margin-top: 40px;
+    text-align: center;
 }
 
 .input-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 120px;
-    margin-bottom: 100px;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 input {
     margin: 10px 0;
-    padding: 10px;
-    width: 400px;
+    padding: 12px;
+    width: 300px;
     text-align: center;
     color: #034694;
-    font-size: 15px;
-    border-radius: 2px;
+    font-size: 16px;
+    border: 2px solid #034694;
+    border-radius: 8px;
 }
 
 input::placeholder {
-    color: #034694;
+    color: #999;
 }
 
 button {
-    padding: 0px 20px;
-    height: 30px;
-    width: 400px;
-    color: #034694;
-    font-weight: bolder;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-    font-size: 20px;
+    padding: 10px;
+    width: 300px;
+    background-color: #034694;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #023065;
 }
 
 #results {
-    margin-top: 20px;
-    text-align: left;
-    padding-left: 300px;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+
+.player-card {
+    background: #ffffff;
+    border: 2px solid #034694;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.player-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.player-card h2 {
+    color: #034694;
+    margin: 10px 0;
+}
+
+.player-card p {
+    color: #ED1C24;
+    font-weight: bold;
 }
